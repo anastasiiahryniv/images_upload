@@ -10,12 +10,12 @@
     </div>
   <% end %>
   <div>
-    <%= form.label :title, style: "display: block" %>
+    <%= form.label :title, class: 'title', style: "display: block" %>
     <%= form.text_field :title %>
   </div>
-  <%= render "image_preview", form: form, post: post %>
+  <%= render "image_preview", form: form,  post: post %>
   <div>
-    <%= form.label :body, style: "display: block" %>
+    <%= form.label :body, class: 'title', style: "display: block" %>
     <%= form.text_area :body %>
   </div>
   <div>
