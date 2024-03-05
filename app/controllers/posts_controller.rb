@@ -54,6 +54,8 @@ class PostsController < ApplicationController
   private
     def set_post
       @post = Post.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => error
+      redirect_to root_path, notice: "It is not possible to find"
     end
 
     def post_params
