@@ -1,11 +1,12 @@
 <div id="<%= dom_id post %>">
   <p>
     <strong>Title:</strong>
-    <%= post.title %>
+  <p><%= post.title %></p>
   </p>
 
-  <%= image_tag(post.image, class: "image") %>
-
+  <% if post.image.attached? %>
+    <%= image_tag post.image, class: 'img-fluid' %>
+  <% end %>
   <p>
     <strong>Body:</strong>
     <%= post.body %>
